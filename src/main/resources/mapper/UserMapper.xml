@@ -1,0 +1,39 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTdaopper-->
+        <!--PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+        <!--"http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<daopper namespacom.tplink.cloud.apiserver.daor.UserMapper">-->
+
+    <!--<resultMap id="userMapper" type="com.tplink.cloud.apiserver.model.User">-->
+        <!--<id property="userId" column="user_id"/>-->
+        <!--<result property="email" column="email"/>-->
+        <!--<result property="password" column="password"/>-->
+        <!--<result property="secretKey" column="secret_key"/>-->
+        <!--<result property="createdTime" column="createdTime"/>-->
+        <!--<result property="update_time" column="updateTime" />-->
+        <!--<result property="last_login" column="lastLogin" />-->
+        <!--<result property="status" column="status" />-->
+    <!--</resultMap>-->
+    <!---->
+    <!--<sql id="saveUser">-->
+        <!--(user_id, email, password, secret_key, created_time, update_time, last_login, status)-->
+    <!--</sql>-->
+    <!---->
+    <!--<sql id="getAllColumn">-->
+        <!--user_id, email, password, secret_key, created_time, update_time, last_login, status-->
+    <!--</sql>-->
+    <!---->
+    <!--<insert id="saveUser" useGeneratedKeys="true" keyProperty="userId" parameterType="com.tplink.cloud.apiserver.model.User">-->
+        <!--INSERT INTO user-->
+        <!--<include refid="saveUser"/>-->
+        <!--VALUES ( #{userId}, #{email}, #{password}, #{secretKey}, NOW(), NOW(), NOW(), #{status})-->
+        <!--ON DUPLICATE KEY UPDATE status = "1",update_time = NOW()-->
+    <!--</insert>-->
+    <!---->
+    <!--<select id="checkIfExist" resultType="boolean">-->
+        <!--SELECT COUNT(*)-->
+        <!--FROM user-->
+        <!--WHERE email = #{email}-->
+        <!--LIMIT 1;-->
+    <!--</select>-->
+<!daopper>-->

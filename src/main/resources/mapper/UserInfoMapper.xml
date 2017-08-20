@@ -1,0 +1,55 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTdaopper-->
+        <!--PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+        <!--"http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<daopper namespacom.tplink.cloud.apiserver.daor.UserInfoMapper">-->
+
+    <!--<resultMap id="userInfoMapper" type="com.tplink.cloud.apiserver.model.UserInfo">-->
+        <!--<id property="infoId" column="info_id"/>-->
+        <!--<result property="userId" column="user_id"/>-->
+        <!--<result property="displayName" column="display_name"/>-->
+        <!--<result property="email" column="email"/>-->
+        <!--<result property="gender" column="gender"/>-->
+        <!--<result property="age" column="age"/>-->
+        <!--<result property="create_time" column="createTime"/>-->
+        <!--<result property="update_time" column="updateTime"/>-->
+        <!--<result property="status" column="status"/>-->
+    <!--</resultMap>-->
+
+    <!--<sql id="saveUserInfo">-->
+        <!--(info_id,user_id,display_name,email,gender,age,created_time,update_time,status)-->
+    <!--</sql>-->
+
+    <!--<sql id="getUserInfoVO">-->
+        <!--user_id,display_name,email,gender,age-->
+    <!--</sql>-->
+
+
+    <!--<insert id="saveUserInfo">-->
+        <!--INSERT INTO user_info-->
+        <!--<include refid="saveUserInfo"/>-->
+        <!--VALUES (#{infoId}, #{userId}, #{displayName}, #{email}, #{gender}, #{age} , NOW(), NOW(), #{status})-->
+        <!--ON DUPLICATE KEY UPDATE status = "1",update_time = NOW()-->
+    <!--</insert>-->
+
+    <!--<update id="updateUserInfo">-->
+        <!--UPDATE user_info SET-->
+        <!--<if test="displayName != null">-->
+            <!--display_name = #{displayName}-->
+        <!--</if>-->
+        <!--<if test="gender != null">-->
+            <!--gender = #{gender}-->
+        <!--</if>-->
+        <!--<if test="age != null">-->
+            <!--age = #{age}-->
+        <!--</if>-->
+        <!--WHERE user_id = #{userId}-->
+    <!--</update>-->
+
+    <!--<select id = "getUserInfo" resultMap="userInfoMapper">-->
+        <!--SELECT-->
+        <!--<include refid="getUserInfoVO"/>-->
+        <!--FROM user_info-->
+        <!--WHERE user_id = #{userId}-->
+    <!--</select>-->
+<!daopper>-->
