@@ -17,7 +17,7 @@
 
     <properties>
         <common-redis.version>1.0.3</common-redis.version>
-        <spring.version>4.1.2.RELEASE</spring.version>
+        <spring.version>4.2.7.RELEASE</spring.version>
         <common-log4j.version>1.0.0</common-log4j.version>
 
     </properties>
